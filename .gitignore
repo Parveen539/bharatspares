@@ -1,0 +1,4 @@
+**/node_modules/
+bharatsparesbe/logs/
+bharatsparesbe/.env
+**/*.log
