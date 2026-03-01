@@ -2,20 +2,21 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import logger from './app/logger/logger.js'
+import versions from './app/versions/index.js'
 
 dotenv.config()
 const PORT = process.env.PORT || 8000
 
 const app = express()
 
-
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}))
 app.use(express.json({limit: "1000mb"}))
 
-app.get("/", (req, res, next) => {
-    const err = new Error("Something went wrong")
-    err.status = 500
-    next(err)
-})
+app.use("/api", versions)
 
 // Logger : this must be last middleware
 app.use((err, req, res, next) => {

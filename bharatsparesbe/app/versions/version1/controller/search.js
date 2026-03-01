@@ -1,0 +1,137 @@
+import ApiResponse from "../../../utils/apiresponses.js"
+
+const searchResult = [
+    {
+      "id": "SUP001",
+      "companyName": "Sharma Auto Components",
+      "contactPerson": "Rohit Sharma",
+      "email": "sales@sharmaautocomponents.in",
+      "phone": "+91-9876543210",
+      "city": "Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "specialization": ["Brake Pads", "Clutch Plates", "Disc Rotors"],
+      "vehicleType": ["Car", "SUV"],
+      "gstNumber": "07ABCDE1234F1Z5",
+      "rating": 4.5,
+      "verified": true,
+      "createdAt": "2026-02-10T10:15:30Z"
+    },
+    {
+      "id": "SUP002",
+      "companyName": "Punjab Truck Spares",
+      "contactPerson": "Gurpreet Singh",
+      "email": "info@punjabtruckspares.com",
+      "phone": "+91-9812345678",
+      "city": "Ludhiana",
+      "state": "Punjab",
+      "country": "India",
+      "specialization": ["Truck Axles", "Leaf Springs", "Gearbox Parts"],
+      "vehicleType": ["Truck", "Commercial"],
+      "gstNumber": "03PQRSX5678L1Z2",
+      "rating": 4.2,
+      "verified": true,
+      "createdAt": "2026-01-15T08:45:00Z"
+    },
+    {
+      "id": "SUP003",
+      "companyName": "Mumbai Auto Bearings",
+      "contactPerson": "Anita Desai",
+      "email": "support@mumbaiautobearings.in",
+      "phone": "+91-9923456781",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "specialization": ["Wheel Bearings", "Ball Bearings", "Oil Seals"],
+      "vehicleType": ["Car", "Bike"],
+      "gstNumber": "27LMNOP7890R1Z3",
+      "rating": 4.7,
+      "verified": false,
+      "createdAt": "2026-02-20T12:30:45Z"
+    },
+    {
+      "id": "SUP004",
+      "companyName": "Chennai Engine Parts Co.",
+      "contactPerson": "Suresh Kumar",
+      "email": "contact@chennaiengineparts.com",
+      "phone": "+91-9845671234",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "specialization": ["Pistons", "Cylinder Kits", "Engine Valves"],
+      "vehicleType": ["Car", "Commercial"],
+      "gstNumber": "33ABCDE4567H1Z8",
+      "rating": 4.3,
+      "verified": true,
+      "createdAt": "2026-02-01T09:10:20Z"
+    },
+    {
+      "id": "SUP005",
+      "companyName": "Kolkata Two Wheeler Spares",
+      "contactPerson": "Arindam Roy",
+      "email": "sales@ktwspares.in",
+      "phone": "+91-9001122334",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "country": "India",
+      "specialization": ["Bike Chains", "Brake Shoes", "Headlights"],
+      "vehicleType": ["Bike"],
+      "gstNumber": "19XYZAB1234M1Z9",
+      "rating": 4.1,
+      "verified": true,
+      "createdAt": "2026-02-18T14:22:10Z"
+    },
+    {
+      "id": "SUP006",
+      "companyName": "Rajasthan Heavy Duty Parts",
+      "contactPerson": "Vikram Singh",
+      "email": "info@rajasthanhdp.com",
+      "phone": "+91-9784512365",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "country": "India",
+      "specialization": ["Hydraulic Pumps", "Trailer Parts", "Suspension Systems"],
+      "vehicleType": ["Truck", "Commercial"],
+      "gstNumber": "08QWERT5678Y1Z1",
+      "rating": 4.6,
+      "verified": false,
+      "createdAt": "2026-02-25T11:05:33Z"
+    },
+    {
+      "id": "SUP007",
+      "companyName": "Bangalore Car Electronics",
+      "contactPerson": "Meena Reddy",
+      "email": "sales@bcelectronics.in",
+      "phone": "+91-9876012345",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India",
+      "specialization": ["Car Sensors", "ECU Modules", "Wiring Harness"],
+      "vehicleType": ["Car"],
+      "gstNumber": "29ABCDE9999K1Z2",
+      "rating": 4.8,
+      "verified": true,
+      "createdAt": "2026-02-28T16:40:00Z"
+    },
+    {
+      "id": "SUP008",
+      "companyName": "Hyderabad Auto Filters",
+      "contactPerson": "Farhan Ali",
+      "email": "support@hydauto.in",
+      "phone": "+91-9012345678",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "specialization": ["Oil Filters", "Air Filters", "Fuel Filters"],
+      "vehicleType": ["Car", "Truck"],
+      "gstNumber": "36LMNOP4567P1Z4",
+      "rating": 4.4,
+      "verified": true,
+      "createdAt": "2026-02-12T10:00:00Z"
+    }
+  ]
+
+export const search = async (req, res) => {
+    res.status(200).json(new ApiResponse(true, "Records Found", searchResult))
+
+}
